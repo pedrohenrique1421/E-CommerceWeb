@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Khitan+Small+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Khitan+Small+Script&family=Prosto+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color1: #242424;
+    --color2: #f1f1f1;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+
+.container {
+    width: 70vw;
+    height: 80vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 24px;
+    box-shadow: 0 0 15px #000000bb;
+}
+
+.container .box {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--color2);
+}
+
+.container .box#wp {
+    background-image: url(Media/Images/Plantas_wp.jpg);
+    background-size: cover;
+    border-radius: 24px 0 0 24px;
+    width: 60%;
+}
+
+.container .box#wp .wrapper {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent, #000);
+}
+
+.container .box h1 {
+    font-family: "Prosto One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+}
+
+.container .box h3 {
+    font-family: "Prosto One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 10%;
+}
+
+.container .box form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+}
+
+.container .box form label {
+    font-size: 18px;
+    font-family: "Noto Serif Khitan Small Script", serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 30px;
+    align-self: flex-start;
+}
+
+.container .box form input[type="email"],
+.container .box form input[type="password"] {
+    width: 100%;
+    background: none;
+    border: transparent 0px solid;
+    border-bottom: solid var(--color2) 2px;
+    color: var(--color2);
+    padding: 4px 4px;
+    font-size: 16px;
+    font-weight: 550;
+    outline: none;
+}
+
+.container .box form button {
+    width: 30%;
+    align-self: flex-end;
+    cursor: pointer;
+    border: none;
+    background-color: var(--color2);
+    color: var(--color1);
+    font-size: 16px;
+    font-family: "Noto Serif Khitan Small Script", serif;
+    font-weight: 700;
+    font-style: italic;
+    line-height: 30px;
+    border-radius: 0 12px 0 12px;
+}

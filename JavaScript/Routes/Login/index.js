@@ -1,0 +1,3 @@
+const GetLogin = () => {
+  alert("login");
+};
