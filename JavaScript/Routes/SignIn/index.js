@@ -19,10 +19,12 @@ const GetSignIn = async () => {
       }
     );
 
-    console.log("res data: ", response.data);
-    console.log("res status: ", response.status);
+    localStorage.setItem("email", email);
+    localStorage.setItem("senha", senha);
+    localStorage.setItem("userData", JSON.stringify(response.data));
+
     btn.innerHTML = `<button class="btn" name="entrar" id="entrar" onclick="GetSignIn()">Entrar</button>`;
-    // window.location.href = "/Pages/Home/index.html";
+    window.location.href = "/Pages/Home/index.html";
   } catch (error) {
     console.log("new Error");
     console.log(error.message);
