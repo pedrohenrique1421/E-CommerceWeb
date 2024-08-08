@@ -92,14 +92,24 @@ body {
     border: transparent 0px solid;
     border-bottom: solid var(--color2) 2px;
     color: var(--color2);
-    padding: 4px 4px;
+    padding: 4px;
     font-size: 16px;
     font-weight: 550;
     outline: none;
 }
 
+.container #pressable {
+    width: 100%;
+    height: 4vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    transition: 1s;
+}
+
 .container .box form button {
-    width: 30%;
+    width: auto;
     align-self: flex-end;
     cursor: pointer;
     border: none;
@@ -107,8 +117,82 @@ body {
     color: var(--color1);
     font-size: 16px;
     font-family: "Noto Serif Khitan Small Script", serif;
-    font-weight: 700;
+    font-weight: 900;
     font-style: italic;
     line-height: 30px;
     border-radius: 0 12px 0 12px;
+    padding: 0 12px;
+}
+
+#loadingElement {
+    width: 3vh;
+    height: 3vh;
+    animation: infinite linear girar 2.5s;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes esmaecer {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 460px) {
+
+    .container {
+        flex-direction: column;
+        width: 95%;
+        height: 100vh;
+        background-image: url(Media/Images/Plantas_wp.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .container .box,
+    .container .box#wp {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        backdrop-filter: blur(4px) grayscale(60%);
+    }
+
+    .container .box h1 {
+        font-size: 170%;
+    }
+
+    .container .box#wp {
+        border-radius: 24px 24px 0 0;
+        height: 0;
+
+    }
+
+    .container .box#wp .wrapper {
+        background-image: linear-gradient(to bottom, transparent, transparent);
+    }
+
+    .container .box form label {
+        font-size: 140%;
+    }
+
+    .container .box form input[type="email"],
+    .container .box form input[type="password"] {
+        font-size: 110%;
+        background-color: #242424ee;
+        border-radius: 0 24px 24px 0;
+        border-right: solid var(--color2) 2px;
+        padding: 6px;
+    }
 }

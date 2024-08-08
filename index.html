@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Commerce - Login</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="JavaScript/Routes/Login/index.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JavaScript/Routes/SignIn/index.js" defer></script>
 </head>
 
 <body>
@@ -22,9 +24,11 @@
                 <input type="email" placeholder="example@exemple.com" name="email" id="email">
                 <br>
                 <label for="senha">Senha</label>
-                <input type="password" placeholder="Exemplo12345/" name="senha" id="senha">
+                <input type="password" placeholder="Exemplo12345/" maxlength="12" name="senha" id="senha">
                 <br>
-                <button class="btn" type="submit" name="entrar" id="entrar" onclick="GetLogin()">Entrar</button>
+                <div id="pressable">
+                    <button class="btn" name="entrar" id="entrar" onclick="GetSignIn()">Entrar</button>
+                </div>
             </form>
         </div>
     </div>
