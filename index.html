@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="JavaScript/DOM/index.js" defer></script>
     <script src="JavaScript/Routes/SignIn/index.js" defer></script>
+    <script src="JavaScript/Routes/SignIn/auto_signIn.js" defer></script>
 </head>
 
 <body>
@@ -18,16 +20,22 @@
         </div>
         <div class="box">
             <h1>E-Commerce Provider</h1>
-            <h3>Login</h3>
             <form>
-                <label for="email">E-mail</label>
-                <input type="email" placeholder="example@exemple.com" name="email" id="email">
-                <br>
-                <label for="senha">Senha</label>
-                <input type="password" placeholder="Exemplo12345/" maxlength="12" name="senha" id="senha">
-                <br>
+                <label for="email">
+                    E-mail
+                    <input type="email" placeholder="example@exemple.com" name="email" id="email">
+                </label>
+                <label for="senha">
+                    Senha
+                    <div class="passwordContainer">
+                        <input type="password" placeholder="Exemplo12345/" maxlength="12" name="senha" id="senha">
+                        <img src="Media/iconmonstr-eye-lined.svg" alt="eye" id="passEye" onclick="MostrarSenha()">
+                    </div>
+                </label>
+                <p onclick="SignIn()">Você fornecedor nâo está cadastrado?</p>
                 <div id="pressable">
-                    <button class="btn" name="entrar" id="entrar" onclick="GetSignIn()">Entrar</button>
+                    <button class="btn" name="entrar" id="entrar"
+                        onclick="GetSignInWithEmailAndPassword()">Entrar</button>
                 </div>
             </form>
         </div>
