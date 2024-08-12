@@ -18,7 +18,7 @@ const MostrarSenha = () => {
 };
 
 const SignIn = () => {
-    AnimationOut("../../Pages/SignUp/index.html");
+    AnimationOut("./Pages/SignUp/index.html");
 };
 
 const AnimationOut = (url) => {
