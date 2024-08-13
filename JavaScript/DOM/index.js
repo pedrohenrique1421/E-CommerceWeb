@@ -1,4 +1,3 @@
-const passinput = document.getElementById("senha");
 const imgPass = document.getElementById("passEye");
 
 const MostrarSenha = () => {
