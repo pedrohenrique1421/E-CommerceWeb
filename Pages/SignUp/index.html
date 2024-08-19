@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce - Sign Up</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="../../Media/favicon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../../JavaScript/Routes/SignUp/index.js"></script>
     <script src="JavaScript/index.js" defer></script>
     <script src="JavaScript/DOM.js" defer></script>
+    <script src="JavaScript/POST.js" defer></script>
 </head>
 
 <body>
@@ -104,13 +109,13 @@
             <!-- Linha -->
 
             <div class="row" id="checkbox">
-                <input type="checkbox" name="termos" id="termos" required>
-                <h3>Aceito os termos de <a href="#">uso de dados e afins</a></h3>
+                <input type="checkbox" class="abc" name="termos" id="termos" required>
+                <h3>Aceito os termos de <a href="https://www.google.com.br/?hl=pt-BR">uso de dados e afins</a></h3>
             </div>
         </form>
         <div class="buttonContainer">
-            <button onclick="AnimationOutBack()">Voltar</button>
-            <button type="submit">Continuar</button>
+            <button onclick="Voltar()">Voltar</button>
+            <button type="submit" onclick="PostFornecedor()">Continuar</button>
         </div>
     </div>
 </body>

@@ -33,6 +33,7 @@ body {
     opacity: 0;
     box-sizing: border-box;
     padding: 4vh 2vw;
+    z-index: 1;
 }
 
 .container form {
@@ -159,7 +160,6 @@ body {
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: -1;
     filter: blur(2px) grayscale(40%);
 }
 
@@ -191,7 +191,7 @@ a {
 }
 
 .fade-out {
-    animation: fadeOut 1s infinite;
+    animation: fadeOut 1s forwards;
 }
 
 .fade-in {

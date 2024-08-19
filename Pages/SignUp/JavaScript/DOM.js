@@ -15,3 +15,7 @@ const MostrarSenha = () => {
         imgPass.classList.remove("fade-in");
     }, 1000);
 };
+
+const Voltar = () => {
+    AnimationOutBack(window.history.back());
+};

@@ -8,18 +8,17 @@ const AnimationIn = () => {
     }, 1000);
 };
 
-const AnimationOutBack = () => {
-    document.body.classList.add("fade-out");
+const AnimationOutBack = (funcao) => {
+    document.getElementsByClassName("container")[0].classList.add("fade-out");
     setTimeout(() => {
         element.style.opacity = "0";
-        window.history.back();
+        typeof funcao === "function" ? funcao() : false;
     }, 1000);
 };
 
 AnimationIn();
 document.addEventListener("DOMContentLoaded", function () {
     const inputContainer = document.getElementsByClassName("abc");
-    console.log(Object.entries(inputContainer));
     const arrayElements = Object.entries(inputContainer);
     arrayElements.forEach((element) => {
         element[1].addEventListener("click", () => {
