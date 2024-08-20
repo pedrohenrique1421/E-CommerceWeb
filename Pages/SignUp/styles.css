@@ -148,7 +148,7 @@ body {
 }
 
 .buttonContainer button:hover {
-    transform: scale(1.025);
+    box-shadow: 0 0 30px #ffffff88;
 }
 
 #wp {
@@ -190,6 +190,12 @@ a {
     transform: translateX(-28px);
 }
 
+img#loading {
+    width: 3vh;
+    height: 3vh;
+    animation: infinite linear girar 2.5s;
+}
+
 .fade-out {
     animation: fadeOut 1s forwards;
 }
@@ -205,6 +211,16 @@ a {
 
     to {
         opacity: 0;
+    }
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }
 
